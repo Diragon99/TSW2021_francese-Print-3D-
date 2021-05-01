@@ -6,17 +6,15 @@ public class ProductBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	int code;
-	String name;
-	String description;
-	int price;
-	int quantity;
-
+	private int code;
+	private String short_descript;
+	private String description;
+	private boolean available;
+	private float vat;
+	private float base_price;
+	private String category;
 	public ProductBean() {
 		code = -1;
-		name = "";
-		description = "";
-		quantity = 0;
 	}
 
 	public int getCode() {
@@ -27,12 +25,12 @@ public class ProductBean implements Serializable {
 		this.code = code;
 	}
 
-	public String getName() {
-		return name;
+	public String getShortdesc() {
+		return short_descritp;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setShortdesc(String shortdesc) {
+		this.short_descript = shortdesc;
 	}
 
 	public String getDescription() {
@@ -43,12 +41,12 @@ public class ProductBean implements Serializable {
 		this.description = description;
 	}
 
-	public int getPrice() {
-		return price;
+	public float getBase_price() {
+		return base_price;
 	}
 
-	public void setPrice(int price) {
-		this.price = price;
+	public void setBase_price(float price) {
+		this.base_price = price;
 	}
 
 	public int getQuantity() {
@@ -58,7 +56,24 @@ public class ProductBean implements Serializable {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-
+	public void setCategory(String cat) {
+		category=cat;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setAvailable(boolean isAvailable) {
+		available=isAvailable;
+	}
+	public boolean getAvailable() {
+		return available;
+	}
+	public float getVat() {
+		return vat;
+	}
+	public void setVat(float _vat) {
+		vat=_vat;
+	}
 	@Override
 	public String toString() {
 		return name + " (" + code + "), " + price + " " + quantity + ". " + description;
