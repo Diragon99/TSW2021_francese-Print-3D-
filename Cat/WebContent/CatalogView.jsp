@@ -26,6 +26,7 @@
 <body>
 	<h2>Products</h2>
 	<a href="product">List</a>
+	<p><a href="product?action=viewC" target="_blank">View cart</a></p>
 	<%
 	UserBean currentUser = (UserBean) (session.getAttribute("currentSessionUser"));
 	if ((currentUser==null)||(!currentUser.isValid()))
