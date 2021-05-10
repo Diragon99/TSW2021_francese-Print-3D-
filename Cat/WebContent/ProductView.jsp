@@ -48,6 +48,6 @@
 		}
 	%>
 	<p><a href="product?action=viewC" target="_blank">View cart</a></p>
-
+	
 </body>
 </html>

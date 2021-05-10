@@ -18,12 +18,4 @@
   	<servlet-name>ProductControl</servlet-name>
   	<url-pattern>/product</url-pattern>
   </servlet-mapping>
-  <servlet>
-  	<servlet-name>ServletLogin</servlet-name>
-  	<servlet-class>com.print.control.ServletLogin</servlet-class>
-  </servlet>
-    <servlet-mapping>
-  	<servlet-name>ServletLogin</servlet-name>
-  	<url-pattern>/login</url-pattern>
-  </servlet-mapping>
 </web-app>

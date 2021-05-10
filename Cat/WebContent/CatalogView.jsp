@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="com.print.model.Cart,com.print.model.ProductBean, com.print.model.UserBean" %>
+
 <%
 	Collection<?> products = (Collection<?>) request.getAttribute("products");
 	if(products == null) {
@@ -26,21 +26,10 @@
 <body>
 	<h2>Products</h2>
 	<a href="product">List</a>
-	<p><a href="product?action=viewC" target="_blank">View cart</a></p>
-	<%
-	UserBean currentUser = (UserBean) (session.getAttribute("currentSessionUser"));
-	if ((currentUser==null)||(!currentUser.isValid()))
-	{
-		%>
-		<a href="LoginPage.jsp">Login</a>
-		<%
-				}
-			 %>
-	
 	<table border="1">
 		<tr>
-			<th>Code <a href="product?sort=id_prodotto">Sort</a></th>
-			<th>Name <a href="product?sort=descrizione_breve">Sort</a></th>
+			<th>Code <a href="product?sort=code">Sort</a></th>
+			<th>Name <a href="product?sort=name">Sort</a></th>
 			<th>Description <a href="product?sort=description">Sort</a></th>
 			<th>Action</th>
 		</tr>
@@ -69,6 +58,8 @@
 			}
 		%>
 	</table>
+	
+	<p><a href="product?action=viewC" target="_blank">View cart</a></p>
 	
 	
 </body>

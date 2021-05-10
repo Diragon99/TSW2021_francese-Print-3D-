@@ -126,4 +126,3 @@ public class UserBean {
 		this.sdi_code = sdi_code;
 	}	
 }
-

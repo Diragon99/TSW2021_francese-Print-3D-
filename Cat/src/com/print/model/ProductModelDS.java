@@ -140,15 +140,6 @@ public class ProductModelDS implements ProductModel {
 		String selectSQL = "SELECT * FROM " + ProductModelDS.TABLE_NAME;
 
 		if (order != null && !order.equals("")) {
-			if(order.equalsIgnoreCase("name")) {
-				order="descrizione_breve";
-			}
-			else if(order.equalsIgnoreCase("code")) {
-				order="id_prodotto";
-			}
-			else if(order.equalsIgnoreCase("description")){
-				order="descrizione";
-			}
 			selectSQL += " ORDER BY " + order;
 		}
 
