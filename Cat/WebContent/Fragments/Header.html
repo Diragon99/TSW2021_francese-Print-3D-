@@ -1,0 +1,92 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<!-- Mobile -->
+	<div id="headerMobile" class="pos-f-t">
+				<!--Navbar-->
+		<nav class="navbar">
+		
+		  <!-- Navbar brand -->
+		  <span class="navbar-brand mb-0 h1"><a href="Homepage.jsp">Print3D</a></span>
+		
+		  <!-- Collapse button -->
+		 
+			
+				<div class="hamb pos-f-t" onclick="hambFoo(this)">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+			
+		</nav>
+			
+		
+		  <!-- Collapsible content -->
+		  <div class="collapse row" id="navbarToggleExternalContent">
+		
+		    <div id="navItemsMob">
+			    <ul>
+			      <li class="nav-item">
+			        <a class="nav-link" href="Homepage.jsp">Home</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="CatalogView.jsp">Modelli 3D</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="AreaUtente.jsp">Area Utente</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="Infos.jsp">Info e Contatti</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="Privacy.jsp">Privacy e Cookie</a>
+			      </li>
+			    </ul>
+		    </div>
+		
+		  </div>
+		  <!-- Collapsible content -->
+		
+		
+		<!--/.Navbar-->
+	</div>
+	<!--  -->
+	<div id="header" class="row flex-direction-row">
+		<div id="logo" class="col-sm-2 col-md-3 col-lg-3"> <!-- to set height to 50% -->
+			<h1><a href="Homepage.jsp">Print3D</a></h1><!--  <img srg="---" alt="Logo.png"> -->
+		</div>
+		<div class="col-sm-1 col-md-1 col-lg-3"></div>
+		<div class="col-sm-9 col-md-8 col-lg-6">
+            <div id="nav">
+                <p><a href="Homepage.jsp">Home</a></p>
+                <p><a href="CatalogView.jsp">Modelli 3D</a></p>
+                <p><a href="AreaUtente.jsp">Area Utente</a></p>
+                <p><a href="Infos.jsp">Info e Contatti</a></p>
+                <p><a href="Privacy.jsp">Privacy e Cookies</a></p>
+            </div>
+            <!-- put stuff in div and fix id nav -->
+            <div id="misc" class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <p>Search bar</p>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <p><a href="CartView.jsp">Cart</a></p>
+                </div>
+            </div>
+		</div>
+	</div>
+	
+	<script>
+	function hambFoo(x) {
+		  x.classList.toggle("change");
+		}
+	
+	/* function toggleMenu(){
+		document.getElementById("#navbarToggleExternalContent").toggleClass("collapse");
+	} */
+	
+	 $(document).ready( function(){
+		$(".hamb").click( function(){
+			$("#navbarToggleExternalContent").toggleClass("collapse");
+		});
+	 });
+	
+	</script>
