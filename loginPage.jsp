@@ -24,7 +24,7 @@
 				<input type="password" class="inputRound" name="pw" id="pwdlog" placeholder="Inserisci password" required/>
 				<span id="pwErr"></span>
 				<br>
-				<input type="submit" class="inputRound" value="Login" id="loginbtn" style="background-color:#ffe06c">
+				<input type="submit" class="inputRound" value="Login" id="loginbtn" > <!-- style="background-color:#ffe06c" -->
 			
 			</form>
 		<br/><br/>
@@ -53,6 +53,7 @@
 			$("#ulog").blur(function(){
 				if((this.value != '') && (regUn.test(this.value) == false)) {
 					$('#unErr').html("L'username dev'essere lungo almeno 6 caratteri<br/>");
+					$('#unErr').css('color', 'red');
 				} else {
 					$('#unErr').html("");
 				}
@@ -67,6 +68,7 @@
 			$("#pwdlog").blur(function(){
 				if((this.value != '') && (regPw.test(this.value) == false)) {
 					$('#pwErr').html("La password dev'essere lunga almeno 8 caratteri<br/>");
+					$('#pwErr').css('color', 'red');
 				} else {
 					$('#pwErr').html("");
 				}
