@@ -1,0 +1,769 @@
+/*--------------- font--------------------------*/
+@font-face {
+font-family: "Arcon";
+src: url("../font/Arcon-Regular.otf");
+}
+
+p{
+	font-family: 'Arcon', Arial, sans-serif;
+	font-weight: bold;
+}
+
+/*--------------- header style --------------------------*/
+body{
+	min-height:100vh;
+	display:flex;
+	flex-direction: column;
+}
+
+
+/*--------------- header style --------------------------*/
+
+#header {
+	background-color: #202020;  /*blackish*/
+    height: 20%;
+    min-height: 50px;
+    color: white;
+    border: 0px 0px 0px 0px;
+}
+
+.loginButton{
+	background-color:blue;
+	padding: 7px 20px;
+	border-radius:10px;
+}
+
+.logoutButton{
+	background-color:red;
+	padding: 7px 20px;
+	border-radius:10px;
+}
+
+
+/*----------------header mobile-------------*/
+
+#headerMobile{
+	display:none;
+	background-color: #202020;  /*blackish*/
+	margin-rigth:-20px;
+}
+
+.navbar > span{
+	color: #ffe06c; /*egg yellow*/
+	margin-left:10px;
+}
+
+.navbar > span > a{
+	text-decoration: none;
+	color: #ffe06c;
+}
+
+.hamb {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #ffe06c;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+@media only screen and (max-width: 768px){
+	#header{
+		display: none;
+	}
+	
+	#headerMobile{
+		display:block;
+	}
+}
+
+/*------dropdown menu-----*/
+
+#navbarToggleExternalContent{
+	justify-content:center;
+	position: absolute;
+	z-index: 10;
+	background-color: #202020;
+	width: 105%;
+}
+
+#navItemsMob{
+	width: fit-content;
+	text-align:center;
+}
+
+#navItemsMob ul li a{
+	text-decoration: none;
+	color: #ffe06c;
+}
+
+
+/*logo*/
+
+#header > #logo{
+    align-self: center;
+}
+
+#header > #logo > h1{
+    text-align: center;
+}
+
+#header > #logo > h1 > a{
+    color: #ffe06c; /*egg yellow*/
+    text-decoration: none;
+}
+
+
+/*nav bar*/
+
+#nav {
+    height: 50%;
+    text-align: right;
+    padding-right:20px;
+}
+
+#nav > a {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+#nav > a:hover{
+    background-color: #ffe06c;
+    
+}
+
+#nav > a:first-child{
+    border-bottom-left-radius: 10px;
+}
+
+#nav > a:last-child{
+    border-bottom-right-radius: 10px;
+}
+
+
+	/*---navbar mobile---*/
+
+
+
+/*searchbar and cart*/
+
+#misc{
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+#misc div{
+    text-align-last: right;
+    padding-right:32px;
+}
+
+#misc div p a{
+	color: white;
+    text-decoration: none;
+}
+
+/*#header > #nav > ul > li {
+    display: inline;
+    vertical-align: middle;
+}*/
+
+/*#header > #nav > ul>:first-child{
+    display: inline;
+    vertical-align: middle;
+    border-bottom-left-radius: 25px;
+}*/
+
+/*#header > #nav > ul > li:hover {
+    background-color: #ffe06c;
+}*/
+
+
+
+/* ------------------------------- footer -------------------------*/
+
+#footer{
+   /*  position: absolute;
+   
+    bottom: 0;
+    width: 100%;
+    height: fit-content; */
+    background-color: #505050;
+    color: #808080;
+    text-align: center;
+    font-size: 0.7em;
+    /* margin:0px; */
+    clear: both;
+}
+.autoSpacer{
+	flex-grow:1;
+	}
+	
+/* -------------------------- Cart ---------------------------*/
+
+#cart{
+	background-color: #969694;
+}
+
+.emptyCart{
+	padding-top:13%;
+	padding-bottom:25%;
+}
+
+.emptyCart p{
+	font-size:1.7em;
+}
+
+.emptyCart a{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+.emptyCart a:hover{
+	color: white;
+}
+
+.notEmptyCart{
+	
+}
+
+.notEmptyCart table {
+	width:100%;
+	background-color: #ffe06c;
+}
+
+.notEmptyCart a{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;	
+}
+
+.notEmptyCart a:hover{
+	color: white;
+}
+
+.notEmptyCart table a{
+	color:black;
+}
+
+.notEmptyCart th{
+	text-decoration: none;
+	color:black;
+	font-weight: bold;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+
+/* -------------------------- catalog ---------------------------*/
+
+#catalogBody{
+	background-color: #a8a8a8;
+}
+
+#catalog h2{
+	color:white
+}
+
+#catalog a{
+	text-decoration: none;
+	color:black;
+	font-weight: bold;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#catalog a:hover{
+	color:white;
+}
+
+.zoomCatalog{
+	overflow: hidden;
+}
+
+.zoomCatalog img {
+ 	transition: transform .7s ease;
+ 	max-width:100%;
+ 	max-height:100%;
+}
+
+.zoomCatalog:hover img {
+ 	transform: scale(1.3);
+}
+
+
+#catalog table {
+	width:100%;
+	background-color: #ffe06c;
+}
+
+.centralColumn{
+	background-color: #3F3F3F;
+}
+
+#catalog > table, th, td {
+	text-align: center;
+	border-collapse: collapse;
+	width:25%;
+}
+
+
+/* #catalog th, td {
+	padding: 5px;
+} */
+
+
+#catalog label {
+	font-weight: bold;
+}
+
+.fakeButton{
+	border-radius: 10px;
+	border: 1px solid black;	
+	padding: 5px 0px;
+	background-color: ffce17;
+	margin-top: 5px;
+}
+
+.addToCart{
+	text-decoration:none;
+	color: #202020;
+}
+
+.addToCart:hover{
+	color:  white;
+}
+
+/* -------------------------- home ---------------------------*/
+
+#home{
+	background-color: #a8a8a8;
+}
+
+#homeCont p{
+	font-size: 1.2em;
+}
+
+#damnRow{
+	margin: 0 -24px;
+}
+#slogan img{
+	height: auto;
+	width:100%;
+}
+
+
+/* #carousel{
+	height:100px;
+	background-color: red;
+} */
+
+.categories{
+	height:175px;
+	width:100%;
+	overflow:hidden;
+
+	/* padding: 0px;
+	margin:0px; */
+}
+
+#toys{
+	background-image: url('../img/Toys.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center;
+	}
+#accessories{
+	background-image: url('../img/Rings.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center;
+}
+#figures{
+	background-image: url('../img/Figures.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center;
+}
+#arch{
+	background-image: url('../img/Architettura.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center;
+}
+
+.zoomContainer{
+	padding:0 !important;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.zoom {
+	width:100%;
+	heigth:100%;
+   transition: all 0.7s;
+}
+
+.zoom:hover {
+ 	transform: scale(1.2);
+	opacity:0.5;
+}
+
+.zoom:hover .showOnHover {
+	opacity:1;
+}
+
+.showOnHover{
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #ffe06c;
+	text-align:center;
+	padding-top:20%;
+	font-size: 1.4em !important;
+	opacity:0;
+	transition: all 0.7s;
+}
+
+
+
+/* #toys{
+	background-image:url()
+	}
+
+#toys{
+	background-image:url()
+	}
+
+#toys{
+	background-image:url()
+	} */
+
+
+/* #try{
+	display:flex;
+	flex-direction: row;
+} */
+
+
+/*------------------- Slideshow ----------------------------*/
+
+#carousel img{
+	height: 350px;
+	width: auto;
+	max-width: 100%;
+}
+
+#altair{
+	height:350px;
+	background-image: url('../img/Altair.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: 50% 50%;
+}
+
+#falcon{
+	height:350px;
+	background-image: url('../img/Falcon.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: 50% 50%;
+}
+
+#chess{
+	height:350px;
+	background-image: url('../img/Chess.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: 50% 50%;
+}
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+
+/* -------------------------- SignUp ---------------------------*/
+#signUpPage{
+	background-color: #a8a8a8;
+	text-align: center;
+}
+
+.inputRound{
+	width: 100%;
+	border-radius:25px;
+	margin: 6px 12px;
+}
+
+.marginTop{
+	margin-top:10%;
+	margin-bottom:10%
+}
+
+.marginWidth{
+	margin-left:30%;
+	margin-right:30%;
+}
+
+#signUpPage p{
+	margin-top:12px;
+	color: #ffe06c;
+	font-weight:bold;
+	/* text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; */
+}
+
+#signUpPage span{
+	color: #cf0000;
+}
+
+#signUpPage #btnSignUp{
+	background-color: #ffe06c;
+}
+
+#signUpPage a{
+	text-decoration:none;
+	color:white;
+}
+
+.cont{
+	width:100%;
+}
+
+/* -------------------------- LogIn ---------------------------*/
+
+#loginPage{
+	background-color: #a8a8a8;
+	text-align: center;
+	height:100%;
+}
+#loginPage a{
+	text-decoration:none;
+	color:white;
+}
+
+#loginDiv span{
+	color: red;
+}
+
+#loginDiv p{
+	color: #ffe06c;
+	font-weight:bold;
+}
+
+#login{
+	margin-left:-1em;
+}
+#loginbtn{
+	background-color: #ffe06c;
+}
+/* -------------------------- Admin ---------------------------*/
+#od{
+	text-align: center;
+	background-color: #969694;
+}
+#od a{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+#od a:hover{
+	color: white;
+}
+#id {display: inline-block;}
+
+#admin{
+	background-color: #969694;
+}
+
+/* -------------------------- Area Utente ---------------------------*/
+
+#userAreaBody{
+	background-color: #969694;
+}
+
+#loginLink{
+	text-align:center;
+	margin-top:20%;
+}
+
+#loginLink p{
+	font-size:1.7em;
+}
+
+#loginLink a{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+/* -------------------------- invalidLogin ---------------------------*/
+#invalidBody{
+	background-color: #969694;
+}
+
+.retryActions{
+	text-align:center;
+	margin-top:18%;
+}
+
+.retryActions a{
+	color:white;
+	text-decoration:none;
+	font-weight: bold;
+}
+
+.retryActions a:hover{
+	color:white;
+}
+
+/* -------------------------- Dettagli Prodotto ---------------------------*/
+
+#detailsBody{
+	background-color: #969694;
+}
+
+#detailsBody table {
+	width:100%;
+	max-width:100%;
+	background-color: #ffe06c;
+}
+
+#detailsBody table th {
+	width:16.66%;
+	max-width:16.66%;
+}
+#detailsBody table td{
+	width:16.66%;
+	max-width:16.66%;
+}
+
+.detailsTable{
+	max-width: 100%;
+	overflow: auto;
+}
+
+.detailsPage a{
+	color:white;
+	text-decoration:none;
+	font-weight: bold;
+}
+
+.detailsPage a:hover{
+	color:white;
+}
+
+.detailsTable a:hover{
+	color:black;
+}
