@@ -42,6 +42,7 @@ public class OrderDetailDAO {
 					  o.setTot(rs.getFloat("prezzo_acquisto"));
 					  o.setIva(rs.getFloat("iva"));
 					  o.setCat(rs.getString("categoria"));
+					  o.setOrdine(id);
 					  details.add(o);
 				  }
 				  return details;
