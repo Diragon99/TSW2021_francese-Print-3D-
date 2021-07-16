@@ -15,6 +15,7 @@
  <div>
 	<%@ include file="/Fragments/Header.html"%>
 </div>
+<p>Riepilogo ordine</p>
 	<table border="1">
 						<tr>
 							<th>Prodotto</th>
@@ -30,6 +31,7 @@
 							<td><%=beancart.getCategory()%></td>							
 						</tr>
 						<%} %>
+						<tr><td>Totale: <%= cart.getTotal() %></td></tr>
 					</table>
 	<form action="checkoutServlet" method="post" id="form_ordini">
 		<label for="def_address">Usa il mio indirizzo per la fatturazione: <%=((UserBean) (session.getAttribute("currentSessionUser"))).getAddress() %></label>
