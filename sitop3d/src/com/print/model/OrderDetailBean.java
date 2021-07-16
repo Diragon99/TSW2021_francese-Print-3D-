@@ -5,6 +5,7 @@ private int prodotto;
 private float tot;
 private float iva;
 private String cat;
+private int ordine;
 public int getProdotto() {
 	return prodotto;
 }
@@ -28,5 +29,11 @@ public String getCat() {
 }
 public void setCat(String cat) {
 	this.cat = cat;
+}
+public int getOrdine() {
+	return ordine;
+}
+public void setOrdine(int ordine) {
+	this.ordine = ordine;
 }
 }
