@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="ISO-8859-1" import="com.print.model.UserBean"%>
+    pageEncoding="ISO-8859-1" import="com.print.model.UserBean, com.print.model.Cart,
+     com.print.model.ProductBean, java.util.List"%>
+<% Cart cart=(Cart)request.getSession().getAttribute("cart"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +15,22 @@
  <div>
 	<%@ include file="/Fragments/Header.html"%>
 </div>
+	<table border="1">
+						<tr>
+							<th>Prodotto</th>
+							<th>Prezzo</th>	
+							<th>Categoria</th>						
+						</tr>
+						<%	List<ProductBean> prodcart = cart.getProducts();
+						   for(ProductBean beancart: prodcart) {
+						%>
+						<tr>
+							<td><%=beancart.getShortdesc()%></td>
+							<td><%=beancart.getBase_price()+beancart.getVat()%></td>
+							<td><%=beancart.getCategory()%></td>							
+						</tr>
+						<%} %>
+					</table>
 	<form action="checkoutServlet" method="post" id="form_ordini">
 		<label for="def_address">Usa il mio indirizzo per la fatturazione: <%=((UserBean) (session.getAttribute("currentSessionUser"))).getAddress() %></label>
 		<input type= "radio" name="indirizzo" id="def_address"  value="def"><br>
