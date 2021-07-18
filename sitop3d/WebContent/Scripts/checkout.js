@@ -1,0 +1,9 @@
+$(document).ready(function(){
+		$("#new_address_value").hide();
+  		$("#def_address").click(function(){
+   		$("#new_address_value").hide();
+  		});
+  	$("#new_address").click(function(){
+    $("#new_address_value").show();
+  });
+});
